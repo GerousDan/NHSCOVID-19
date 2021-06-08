@@ -53,13 +53,13 @@
 		
 	}
 </style><script>
-	/* Welcome to the Covid 1984 web app, thank you for taking the time to checkout my 1st class coding skillz :D */
+	
 	window.onload = function() {
 		const months = ["January", "February", "March", "April", "May", "June",
 		  "July", "August", "September", "October", "November", "December"
 		];
 		var date = new Date();
-		var dateStr = date.getDate() .toString().padStart(2, '0') + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
+		var dateStr = date.getDate() .toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
 		document.getElementById("time").innerText =dateStr;
 		
 		document.getElementById("setText").onclick = function() {
@@ -104,7 +104,7 @@
 	</p>
 	
 	<p class="success">
-		Successful check-in
+		Thank you for checking in to
 	</p>
 	<p class="venue" id="venueText">
 		Tap &quot;Back to home&quot; to set me.
@@ -113,13 +113,13 @@
 		
 	</p>
 	<p class="blurb">
-		Thank you for scanning. You have now checked in! You'll be automatically checked out at midnight or when you scan another official NHS QR code.
+		The app is the fastest way to be alerted of potential exposure to coronavirus at a venue.
+	</p>
+	<p class="cancel" id="fullscreen">
+		Wrong check-in? Tap to cancel.
 	</p>
 	<p>
 		<button class="fakeButton" id="setText">Back to home</button>
-	</p>
-	<p class="cancel" id="fullscreen">
-		Cancel this check-in
 	</p>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108862261-5"></script>
