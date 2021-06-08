@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Covid1984 Web App</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><style>
+	html {
+		font-family: 'helvetica';
+		background: white;
+		color: black;
+	}
+	body {
+		padding-top: 5rem;
+		background: white;
+		color: black;
+	}
+	p {
+		text-align: center;
+	}	
+	.success {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+	.venue {
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	.time {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-top: 1rem;
+	}
+	.blurb {
+		font-size: 1.2rem;
+		padding-left: 7%;
+		padding-right: 7%;
+	}
+	#tickImg {
+		width: 30%;
+		height: 30%;
+	}
+	.fakeButton {
+		background-color: #0072CE;
+		color: white;
+		width:80%;
+		font-size: 1rem;
+		padding: 0.7rem 1rem;
+	}
+	.cancel {
+		color: #0072CE;
+		text-align: center;
+		font-size: 1.2rem;
+		padding: 0.2rem 0;
+		
+	}
+</style><script>
+	/* Welcome to the Covid 1984 web app, thank you for taking the time to checkout my 1st class coding skillz :D */
+	window.onload = function() {
+		const months = ["January", "February", "March", "April", "May", "June",
+		  "July", "August", "September", "October", "November", "December"
+		];
+		var date = new Date();
+		var dateStr = date.getDate() .toString().padStart(2, '0') + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
+		document.getElementById("time").innerText =dateStr;
+		
+		document.getElementById("setText").onclick = function() {
+			document.getElementById("venueText").innerText = window.prompt("Enter venue name","");
+		}
+		document.getElementById("fullscreen").onclick = function() {
+			if(!document.fullscreenElement) {
+				openFullscreen();
+			} else {
+				closeFullscreen();
+			}
+		}
+	}
+	
+	function openFullscreen() {
+		if (document.body.requestFullscreen) {
+			document.body.requestFullscreen();
+		} else if (document.body.mozRequestFullScreen) {
+			document.body.mozRequestFullScreen();
+		} else if (document.body.webkitRequestFullscreen) {
+			document.webkitRequestFullscreen();
+		} else if (document.body.msRequestFullscreen) {
+			document.body.msRequestFullscreen();
+		}
+	}
+	
+	function closeFullscreen() {
+	  if (document.exitFullscreen) {
+		document.exitFullscreen();
+	  } else if (document.mozCancelFullScreen) {
+		document.mozCancelFullScreen();
+	  } else if (document.webkitExitFullscreen) {
+		document.webkitExitFullscreen();
+	  } else if (document.msExitFullscreen) {
+		document.msExitFullscreen();
+	  }
+	}
+</script></head><body>
+	
+	<p>
+		<img id="tickImg" src="tick.png">
+	</p>
+	
+	<p class="success">
+		Successful check-in
+	</p>
+	<p class="venue" id="venueText">
+		Tap &quot;Back to home&quot; to set me.
+	</p>
+	<p class="time" id="time">
+		
+	</p>
+	<p class="blurb">
+		Thank you for scanning. You have now checked in! You'll be automatically checked out at midnight or when you scan another official NHS QR code.
+	</p>
+	<p>
+		<button class="fakeButton" id="setText">Back to home</button>
+	</p>
+	<p class="cancel" id="fullscreen">
+		Cancel this check-in
+	</p>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108862261-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108862261-5');
+</script>
+</body></html>
