@@ -9,10 +9,17 @@
 	<style>
 	html {
 		font-family: 'helvetica';
+		background: #f0f4f5;
+		height:100%;
+		overflow:hidden;
+		position:relative;
 	}
 	body {
 		padding-top: 1rem;
 		background-color: #f0f4f5;
+		height:100%;
+		overflow:hidden;
+		position:relative;
 	}
 	p {
 		text-align: center;
@@ -22,18 +29,18 @@
 		font-weight: bold;
 		margin-bottom: 1rem;
 	}
-	.venue {
+	#venue {
 		font-size: 2.5rem;
 		font-weight: bold;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-	.time {
+	#time {
 		font-size: 2rem;
 		font-weight: bold;
 		margin-top: 1rem;
 	}
-	.blurb {
+	#blurb {
 		font-size: 1.2rem;
 		padding-left: 7%;
 		padding-right: 7%;
@@ -42,64 +49,59 @@
 		width: 30%;
 		height: 30%;
 	}
-	.fakeButton {
+	#home {
 		background-color: #0072CE;
 		color: white;
 		width:80%;
 		font-size: 1rem;
 		padding: 0.7rem 1rem;
 	}
-	.cancel {
+	#cancel {
 		color: #0072CE;
 		text-align: center;
 		font-size: 1.2rem;
 		padding: 0.2rem 0;
-		
+		text-decoration: underline;
 	}
 	</style>
 	<script>	
 	window.onload = function() {
 		checkinTime();
-		document.getElementById("venueText").onclick = function() {
-			document.getElementById("venueText").innerText = window.prompt("Check in to","");
+		document.getElementById("home").onclick = function() {
+			document.getElementById("home").innerText = window.prompt("Check in to","");
 		}
-		document.getElementById("setText").onclick = function() {
-			document.getElementById("venueText").innerText = window.prompt("Check in to","");
+		document.getElementById("home").onclick = function() {
+			document.getElementById("home").innerText = window.prompt("Check in to","");
 		}
 		document.getElementById("time").onclick = function() {
 			checkinTime();
 		}
-		document.getElementById("fullscreen").onclick = function() {
+		document.getElementById("cancel").onclick = function() {
 			checkinTime();
 		}
 	}
 	function checkinTime() {
 		const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		var date = new Date();
-		var dateStr = date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
+		var dateStr = date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
 		document.getElementById("time").innerText = dateStr;
 	}
 	</script>
 </head>
 <body>
 	<p>
-		 
-	</p>
-	<p>
+		
+	</p><p>
 		<img id="tickImg" src="tick.png">
 	</p><p class="success">
-		Thank you for checking in to
-	</p><p class="venue" id="venueText">
-		The Venue
-	</p><p class="time" id="time">
+		Thank you for checking in to <b id="venue">The Venue</b>
+	</p><p id="time">
 		
-	</p><p class="blurb">
+	</p><p id="blurb">
 		The app is the fastest way to be alerted of potential exposure to coronavirus at a venue.
-	</p><p class="cancel" id="fullscreen">
+	</p><p id="cancel">
 		Wrong check-in? Tap to cancel.
-	</p>
-	<p>
-		<button class="fakeButton" id="setText">Back to home</button>
+		<button id="home">Back to home</button>
 	</p>
 </body>
 </html>
