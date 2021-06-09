@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">	
+	<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">	
 	<link rel="apple-touch-icon" href="icon.png">
 	<style>
 	html {
@@ -58,47 +58,26 @@
 	</style>
 	<script>	
 	window.onload = function() {
-		const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-		var date = new Date();
-		var dateStr = date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
-		document.getElementById("time").innerText = dateStr;
-		
+		checkinTime();
 		document.getElementById("setText").onclick = function() {
 			document.getElementById("venueText").innerText = window.prompt("Check in to","");
 		}
 		document.getElementById("fullscreen").onclick = function() {
-			if(!document.fullscreenElement) {
-				openFullscreen();
-			} else {
-				closeFullscreen();
-			}
+			checkinTime();
 		}
 	}
-	function openFullscreen() {
-		if (document.body.requestFullscreen) {
-			document.body.requestFullscreen();
-		} else if (document.body.mozRequestFullScreen) {
-			document.body.mozRequestFullScreen();
-		} else if (document.body.webkitRequestFullscreen) {
-			document.webkitRequestFullscreen();
-		} else if (document.body.msRequestFullscreen) {
-			document.body.msRequestFullscreen();
-		}
-	}	
-	function closeFullscreen() {
-	  if (document.exitFullscreen) {
-		document.exitFullscreen();
-	  } else if (document.mozCancelFullScreen) {
-		document.mozCancelFullScreen();
-	  } else if (document.webkitExitFullscreen) {
-		document.webkitExitFullscreen();
-	  } else if (document.msExitFullscreen) {
-		document.msExitFullscreen();
-	  }
+	function checkinTime() {
+		const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		var date = new Date();
+		var dateStr = date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + (date.getHours()) + ':' + date.getMinutes().toString().padStart(2, '0');
+		document.getElementById("time").innerText = dateStr;
 	}
 	</script>
 </head>
 <body>
+	<p>
+		 
+	</p>
 	<p>
 		<img id="tickImg" src="tick.png">
 	</p><p class="success">
