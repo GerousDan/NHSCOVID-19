@@ -68,10 +68,10 @@
 	window.onload = function() {
 		checkinTime();
 		document.getElementById("thanks").onclick = function() {
-			document.getElementById("venue").innerText = window.prompt("Check in to","");
+			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
 		}
 		document.getElementById("home").onclick = function() {
-			document.getElementById("venue").innerText = window.prompt("Check in to","");
+			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
 		}
 		document.getElementById("time").onclick = function() {
 			document.getElementById("home").innerText = window.prompt("Check in time",currentTime());
