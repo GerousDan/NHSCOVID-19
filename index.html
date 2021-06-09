@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>NHS COVID-19</title><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="apple-mobile-web-app-status-bar-style" content="white-translucent"><meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="apple-touch-icon" href="icon.png"><style>
+<!DOCTYPE html><html>
+<head>
+	<meta charset="utf-8"><title>NHS COVID-19</title><meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="icon.png">
+	<style>
 	html {
 		font-family: 'helvetica';
 		background: #f0f4f5;
@@ -53,8 +57,8 @@
 		padding: 0.2rem 0;
 		
 	}
-</style><script>
-	
+	</style>
+	<script>	
 	window.onload = function() {
 		const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		var date = new Date();
@@ -72,7 +76,6 @@
 			}
 		}
 	}
-	
 	function openFullscreen() {
 		if (document.body.requestFullscreen) {
 			document.body.requestFullscreen();
@@ -83,8 +86,7 @@
 		} else if (document.body.msRequestFullscreen) {
 			document.body.msRequestFullscreen();
 		}
-	}
-	
+	}	
 	function closeFullscreen() {
 	  if (document.exitFullscreen) {
 		document.exitFullscreen();
@@ -96,37 +98,24 @@
 		document.msExitFullscreen();
 	  }
 	}
-</script></head><body>
-	
+	</script>
+</head>
+<body>
 	<p>
 		<img id="tickImg" src="tick.png">
-	</p>
-	
-	<p class="success">
+	</p><p class="success">
 		Thank you for checking in to
-	</p>
-	<p class="venue" id="venueText">
+	</p><p class="venue" id="venueText">
 		The Venue
-	</p>
-	<p class="time" id="time">
+	</p><p class="time" id="time">
 		
-	</p>
-	<p class="blurb">
+	</p><p class="blurb">
 		The app is the fastest way to be alerted of potential exposure to coronavirus at a venue.
-	</p>
-	<p class="cancel" id="fullscreen">
+	</p><p class="cancel" id="fullscreen">
 		Wrong check-in? Tap to cancel.
 	</p>
 	<p>
 		<button class="fakeButton" id="setText">Back to home</button>
 	</p>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108862261-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-108862261-5');
-</script>
-</body></html>
+</body>
+</html>
