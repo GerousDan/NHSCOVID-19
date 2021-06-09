@@ -24,7 +24,7 @@
 	p {
 		text-align: center;
 	}	
-	.success {
+	#thanks {
 		font-size: 2rem;
 		font-weight: bold;
 		margin-bottom: 1rem;
@@ -67,40 +67,40 @@
 	<script>	
 	window.onload = function() {
 		checkinTime();
-		document.getElementById("home").onclick = function() {
-			document.getElementById("home").innerText = window.prompt("Check in to","");
+		document.getElementById("thanks").onclick = function() {
+			document.getElementById("venue").innerText = window.prompt("Check in to","");
 		}
 		document.getElementById("home").onclick = function() {
-			document.getElementById("home").innerText = window.prompt("Check in to","");
+			document.getElementById("venue").innerText = window.prompt("Check in to","");
 		}
 		document.getElementById("time").onclick = function() {
-			checkinTime();
+			document.getElementById("home").innerText = window.prompt("Check in time",currentTime());
 		}
 		document.getElementById("cancel").onclick = function() {
 			checkinTime();
 		}
 	}
-	function checkinTime() {
+		
+	function currentTime() {
 		const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		var date = new Date();
-		var dateStr = date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
-		document.getElementById("time").innerText = dateStr;
+		return date.getDate().toString() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' ' + date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
+	}
+		
+	function checkinTime() {
+		document.getElementById("time").innerText = currentTime();
 	}
 	</script>
 </head>
 <body>
-	<p>
-		
-	</p><p>
-		<img id="tickImg" src="tick.png">
-	</p><p class="success">
-		Thank you for checking in to <b id="venue">The Venue</b>
-	</p><p id="time">
-		
-	</p><p id="blurb">
-		The app is the fastest way to be alerted of potential exposure to coronavirus at a venue.
-	</p><p id="cancel">
-		Wrong check-in? Tap to cancel.
+	<p></p>
+	<img id="tickImg" src="tick.png">
+	<p id="thanks">Thank you for checking in to 
+		<b id="venue">The Venue</b>
+	</p>
+	<p id="time"></p>
+	<p id="blurb">The app is the fastest way to be alerted of potential exposure to coronavirus at a venue.</p>
+	<p id="cancel">Wrong check-in? Tap to cancel.
 		<button id="home">Back to home</button>
 	</p>
 </body>
