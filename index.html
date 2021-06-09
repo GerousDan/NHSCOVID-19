@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">	
 	<link rel="apple-touch-icon" href="icon.png">
 	<style>
 	html {
@@ -59,8 +59,14 @@
 	<script>	
 	window.onload = function() {
 		checkinTime();
+		document.getElementById("venueText").onclick = function() {
+			document.getElementById("venueText").innerText = window.prompt("Check in to","");
+		}
 		document.getElementById("setText").onclick = function() {
 			document.getElementById("venueText").innerText = window.prompt("Check in to","");
+		}
+		document.getElementById("time").onclick = function() {
+			checkinTime();
 		}
 		document.getElementById("fullscreen").onclick = function() {
 			checkinTime();
