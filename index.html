@@ -28,6 +28,7 @@
 	}
 	#venue {
 		font-size: 39px;
+		-webkit-user-modify: read-write;
 	}
 	#time {
 		font-size: 2rem;
@@ -58,12 +59,13 @@
 		font-weight: bold;
 	}
 	</style>
-	<script>	
+	<script>
+	import jwt_decode from 'jwt-decode';
+	var token = 'eyJhbGciOiJFUzI1NiIsImtpZCI6IllycWVMVHE4ei1vZkg1bnpsYVNHbllSZkI5YnU5eVBsV1lVXzJiNnFYT1EifQ.eyJpZCI6IjU2OFg2VzMzIiwib3BuIjoiVGhlIE5pZ2h0aW5nYWxlIG9uIHRoZSBHcmVlbiIsInZ0IjoiMDA4IiwicGMiOiJFMTEyRVkifQ.9gpCbwwfhwPljNpIl1GYVwPXC8WV0cf85hRhIayYMe3iNKcFgTFxV_DtXBwHLJCcTLEHSf0RWzuDOA-LR6TdUg';
+	var decoded = JSON.parse(jwt_decode(token).toString());	
 	window.onload = function() {
 		checkinTime();
-		document.getElementById("thanks").onclick = function() {
-			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
-		}
+
 		document.getElementById("home").onclick = function() {
 			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
 		}
