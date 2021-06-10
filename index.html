@@ -73,9 +73,10 @@
 		
 	window.onload = function() {
 		checkinTime();
+		var token = 'eyJhbGciOiJFUzI1NiIsImtpZCI6IllycWVMVHE4ei1vZkg1bnpsYVNHbllSZkI5YnU5eVBsV1lVXzJiNnFYT1EifQ.eyJpZCI6IlI5SllZNFdQIiwib3BuIjoiVGVzdCBRUiBwb3N0ZXIgZm9yIFdhbGVzIiwidnQiOiIwMTIiLCJwYyI6IkNGMjQ0VE4ifQ.AKTiwwXLAx6rDkxDhVbRncM1uhOchpJqBAZ-PjY1IAjW3Wihi8ji-sQ-mFbzjhLL5mnrz5Ep8d7MnOHkf0MBEQ';
 
 		document.getElementById("home").onclick = function() {
-			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
+			document.getElementById("venue").innerText = window.prompt(parseJwt(token),token);
 		}
 
 		document.getElementById("cancel").onclick = function() {
@@ -83,7 +84,8 @@
 		}
 		
 		document.getElementById("app").onclick = function() {
-			document.getElementById("venue").innerText = document.getElementById("venue").innerText;
+			var newVenue = document.getElementById("venue").innerText;
+			var newTime = document.getElementById("time").innerText;
 		}
 	}
 		
