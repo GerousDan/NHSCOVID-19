@@ -32,6 +32,7 @@
 	}
 	#time {
 		font-size: 2rem;
+		-webkit-user-modify: read-write;
 	}
 	#blurb {
 		font-size: 1.2rem;
@@ -67,9 +68,7 @@
 		document.getElementById("home").onclick = function() {
 			document.getElementById("venue").innerText = window.prompt("Check in to",document.getElementById("venue").innerText);
 		}
-		document.getElementById("time").onclick = function() {
-			document.getElementById("time").innerText = window.prompt("Check in time",currentTime());
-		}
+
 		document.getElementById("cancel").onclick = function() {
 			checkinTime();
 		}
