@@ -15,9 +15,6 @@
     <link rel="apple-touch-icon" href="icon.png" />
     <style>
       html {
-        height: calc(100% + env(safe-area-inset-top));
-        padding: env(safe-area-inset-top) env(safe-area-inset-right)
-          env(safe-area-inset-bottom) env(safe-area-inset-left);
         background-attachment: scroll;
         background-image: url("6.PNG");
         background-repeat: no-repeat;
@@ -25,17 +22,17 @@
         -moz-background-size: 100%;
         -webkit-background-size: 100%;
         -o-background-size: 100%;
-        background-position: center center; 
+        background-position: center top; 
         font-family: "helvetica";
         overflow: hidden;
-        /* position: relative; */
+        height: calc(100% + env(safe-area-inset-top));
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left);
       }
       body {
-        padding-top: 2rem;
-        /* background-color: white; */
+        padding-top: 20%;
         height: 100%;
         overflow: hidden;
-        position: relative;
       }
       p {
         text-align: center;
