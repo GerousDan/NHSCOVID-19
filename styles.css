@@ -1,0 +1,62 @@
+html {
+  background-attachment: scroll;
+  background-image: url("6.PNG");
+  background-repeat: no-repeat;
+  background-size: 375px;
+  /*         -moz-background-size: 100%;
+        -webkit-background-size: 100%;
+        -o-background-size: 100%; */
+  background-position: center top;
+  font-family: "helvetica";
+  overflow: hidden;
+  height: calc(100% + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+body {
+  height: 100%;
+  overflow: hidden;
+}
+p {
+  text-align: center;
+}
+#thanks {
+  font-size: 1.1rem;
+}
+#venue {
+  font-size: 1.2rem;
+  -webkit-user-modify: read-write;
+}
+#time {
+  font-size: 1.5rem;
+  -webkit-user-modify: read-write;
+}
+#blurb {
+  font-size: 1.4rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#tickImg {
+  width: 25%;
+  height: 25%;
+}
+#cancel {
+  position: fixed; /* added */
+  bottom: 10%;
+  color: #005eb8;
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+  padding: 0;
+  text-decoration: underline;
+  line-height: 1.8;
+  width: 80%;
+}
+#home {
+  background-color: #005eb8;
+  color: #fff;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  width: 80%;
+}
