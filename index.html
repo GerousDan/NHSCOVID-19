@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="icon.png" />
     <style>
       html {
-        background: url("6.png") no-repeat center center fixed;
+        background: url("6.PNG") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -102,21 +102,23 @@
           );
         };
 
-        document.getElementById("cancel").onclick = function () {
-          checkinTime();
-        };
-
-        document.getElementById("blurb").onclick = function () {
-          var el = document.getElementById("blurb");
-          var computedFontSize = window.getComputedStyle(el).fontSize;
-          el.style.fontSize = window.prompt("font-size", computedFontSize);
-        };
-
         document.getElementById("app").onclick = function () {
           var newVenue = document.getElementById("venue").innerText;
           var newTime = document.getElementById("time").innerText;
         };
       };
+
+      function resize(element) {
+        var bodyFontSize = parseFloat(
+          window.getComputedStyle(document.body).fontSize
+        );
+        var computedFontSize = parseFloat(
+          window.getComputedStyle(element).fontSize
+        );
+        element.style.fontSize =
+          window.prompt("REM", computedFontSize / bodyFontSize) * bodyFontSize +
+          "px";
+      }
 
       function currentTime() {
         const months = [
@@ -160,12 +162,12 @@
         <b id="venue">The Venue</b>
       </p>
       <p id="time"></p>
-      <p id="blurb">
+      <p id="blurb" onclick="resize(this);">
         The app is the fastest way to be alerted of potential exposure to
         coronavirus at a venue.
       </p>
     </div>
-    <p id="cancel">
+    <p id="cancel" onclick="checkinTime();">
       Wrong check-in? Tap to cancel.
       <button id="home">Back to home</button>
     </p>
