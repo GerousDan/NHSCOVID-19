@@ -42,7 +42,7 @@ function resize(element) {
 function rebottom(element) {
   var bodyFontSize = parseFloat(window.getComputedStyle(document.body).height);
   var computedFontSize = parseFloat(window.getComputedStyle(element).bottom);
-  element.style.fontSize =
+  element.style.bottom =
     window.prompt("Ratio", computedFontSize / bodyFontSize) * bodyFontSize +
     "px";
 }
