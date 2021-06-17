@@ -18,9 +18,14 @@
         height: calc(100% + env(safe-area-inset-top));
         padding: env(safe-area-inset-top) env(safe-area-inset-right)
           env(safe-area-inset-bottom) env(safe-area-inset-left);
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-image: url("6.PNG");
         background-repeat: no-repeat;
+background-size:cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-position: center center; 
         font-family: "helvetica";
         overflow: hidden;
         /* position: relative; */
