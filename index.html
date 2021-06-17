@@ -17,7 +17,13 @@
       html {
         height: calc(100% + env(safe-area-inset-top));
         padding: env(safe-area-inset-top) env(safe-area-inset-right)
-          env(safe-area-inset-bottom) env(safe-area-inset-left);
+          env(safe-area-inset-bottom) env(safe-area-inset-        font-family: "helvetica";
+        overflow: hidden;
+        /* position: relative; */
+      }
+      body {
+        padding-top: 2rem;
+left);
         background-attachment: scroll;
         background-image: url("6.PNG");
         background-repeat: no-repeat;
@@ -26,16 +32,9 @@ background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 background-position: center center; 
-        font-family: "helvetica";
-        overflow: hidden;
-        /* position: relative; */
-      }
-      body {
-        padding-top: 2rem;
-        /* background-color: white; */
         height: 100%;
         overflow: hidden;
-        position: relative;
+        position: fixed;
       }
       p {
         text-align: center;
@@ -168,7 +167,7 @@ background-position: center center;
       </p>
       <p id="time"></p>
       <p id="blurb" onclick="resize(this);">
-        The app is the fastest way to be alerted of potential exposure to
+        The ap0 is the fastest way to be alerted of potential exposure to
         coronavirus at a venue.
       </p>
     </div>
