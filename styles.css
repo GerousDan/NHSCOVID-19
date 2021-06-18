@@ -41,8 +41,7 @@ p {
   height: 25%;
 }
 #cancel {
-  position: fixed; /* added */
-  bottom: 10%;
+  position: fixed;
   color: #005eb8;
   text-align: center;
   margin-bottom: 4px;
@@ -53,10 +52,14 @@ p {
   width: 80%;
 }
 #home {
-  background-color: #005eb8;
+  position: fixed;
+  bottom: 5.5%;
+  /* background-color: #005eb8; */
+  background: Transparent no-repeat;
   color: #fff;
   padding: 12px 16px;
   font-weight: 600;
   font-size: 1.4rem;
   width: 80%;
+  text-align: center;
 }
