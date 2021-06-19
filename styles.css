@@ -1,12 +1,12 @@
 html {
-  background-attachment: scroll;
+  /* background-attachment: scroll;
   background-image: url(6.PNG);
   background-repeat: no-repeat;
   background-size: 375px;
   -moz-background-size: 100%;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
-  background-position: center top;
+  background-position: center top; */
   font-family: "helvetica";
   overflow: hidden;
   height: calc(100% + env(safe-area-inset-top));
@@ -66,7 +66,9 @@ div {
   background-color: #005eb8;
   /* background: Transparent no-repeat; */
 }
-/* #tickImg {
-  width: 25%;
-  height: 25%;
-} */
+#tickImg {
+  position: fixed;
+  width: 104px;
+  margin-left: -52px;
+  top: 20%;
+}
