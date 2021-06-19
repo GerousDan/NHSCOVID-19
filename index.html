@@ -18,19 +18,21 @@
   </head>
   <body>
     <div id="app">
-      <p><img id="tickImg" src="tick.png" /></p>
-      <p id="thanks">
+      <div id="thanks">
         Thank you for checking in to
-        <b id="venue">The Venue</b>
-      </p>
-      <p id="time"></p>
-      <p id="blurb" onclick="resize(this);">
-        The app is the fastest way to be alerted of potential exposure to
-        coronavirus at a venue.
-      </p>
+        <b id="venue">GAIL's Bakery</b>
+        <div id="time"></div>
+        <div id="blurb">
+          The app is the fastest way to be alerted of potential exposure to
+          coronavirus at a venue.
+        </div>
+      </div>
     </div>
-    <!-- <p id="cancel" onclick="checkinTime();"> -->
-    <p id="cancel" onclick="rebottom(this);">Wrong check-in? Tap to cancel.</p>
-    <button id="home">Back to home</button>
+    <div id="cancel">Wrong check-in? Tap to cancel.</div>
+    <div id="home">Back to home</div>
   </body>
 </html>
+<!-- <div><img id="tickImg" src="tick.png" /></div> -->
+<!-- onclick="rebottom(this);" -->
+<!-- onclick="checkinTime();"-->
+<!-- onclick="resize(this);" -->
