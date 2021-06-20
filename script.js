@@ -67,9 +67,9 @@ function resize(element) {
   var bodyFontSize = parseFloat(
     window.getComputedStyle(document.body).fontSize
   );
-  element.wordSpacing = window.prompt(
+  element.style.wordSpacing = window.prompt(
     bodyFontSize,
-    parseFloat(window.getComputedStyle(element).wordSpacing)
+    window.getComputedStyle(element).wordSpacing
   );
 
   //   element.style.fontSize =

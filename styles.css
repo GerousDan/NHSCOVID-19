@@ -12,7 +12,20 @@ html {
   background-position: left 0px bottom 0px;
   font: -apple-system-body;
   overflow: hidden;
-
+  /* text (4=default, 8+): px
+1: 14
+2: 15
+3: 16
+4: 17
+5: 19
+6: 21
+7: 23
+8: 28
+9: 33
+10:40
+11:47
+12:53
+ */
   /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
 }
 body {
