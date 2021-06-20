@@ -65,15 +65,19 @@ function checkinTime() {
 
 function resize(element) {
   var bodyFontSize = parseFloat(
-    window.getComputedStyle(document.body).fontSize
+    // window.getComputedStyle(document.body).fontSize
+    window.getComputedStyle(document.body).fontWeight
   );
-  element.style.fontSize =
-    window.prompt(
-      "Font size in REM",
-      parseFloat(window.getComputedStyle(element).fontSize) / bodyFontSize
-    ) *
-      bodyFontSize +
-    "px";
+  //   element.style.fontSize =
+  element.style.fontWeight = window.prompt(
+    //   "Font size in REM",
+    //   parseFloat(window.getComputedStyle(element).fontSize) / bodyFontSize
+    // ) *
+    //   bodyFontSize +
+    // "px";
+    "Font weight",
+    parseFloat(window.getComputedStyle(element).fontWeight)
+  );
 }
 function retop(element) {
   element.style.top =
