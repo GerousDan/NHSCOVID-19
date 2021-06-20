@@ -18,24 +18,28 @@
   </head>
   <body>
     <div id="top">
-      <img id="tickImg" src="tick.png" />
-      <div id="thanks">
+      <img id="tickImg" src="tick.png" onclick="retop(this);" />
+      <div id="thanks" onclick="resize(this);">
         Thank you for checking in to
         <b id="venue">GAIL's Bakery</b>
-        <div id="time"></div>
-        <div id="blurb">
+        <div id="time" onclick="resize(this);"></div>
+        <div id="blurb" onclick="resize(this);">
           The app is the fastest way to be alerted of potential exposure to
           coronavirus at a venue.
         </div>
       </div>
     </div>
     <div id="bottom">
-      <div id="cancel" onclick="checkinTime();">
+      <div id="cancel" onclick="resize(this);">
         Wrong check-in? Tap to cancel.
       </div>
-      <div id="home">Back to home</div>
+      <div id="home" onclick="resize(this);">Back to home</div>
     </div>
   </body>
 </html>
-<!-- onclick="rebottom(this);" -->
-<!-- onclick="resize(this);" -->
+<!-- 
+	onclick="checkinTime();" 
+	onclick="resize(this);"
+	onclick="retop(this);"
+	onclick="rebottom(this);"
+ -->

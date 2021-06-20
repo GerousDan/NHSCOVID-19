@@ -29,6 +29,7 @@ div {
   margin: 0 auto;
   left: 0;
   right: 0;
+  color: rgb(255, 0, 0);
 }
 #thanks {
   position: fixed;

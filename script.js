@@ -63,19 +63,20 @@ function checkinTime() {
 //   return JSON.parse(jsonPayload)["opn"];
 // }
 
-// function resize(element) {
-//   var bodyFontSize = parseFloat(
-//     window.getComputedStyle(document.body).fontSize
-//   );
-//   var computedFontSize = parseFloat(window.getComputedStyle(element).fontSize);
-//   element.style.fontSize =
-//     window.prompt("REM", computedFontSize / bodyFontSize) * bodyFontSize + "px";
-// }
-
-// function rebottom(element) {
-//   var bodyFontSize = parseFloat(window.getComputedStyle(document.body).height);
-//   var computedFontSize = parseFloat(window.getComputedStyle(element).bottom);
-//   element.style.bottom =
-//     window.prompt("Ratio", computedFontSize / bodyFontSize) * bodyFontSize +
-//     "px";
-// }
+function resize(element) {
+  var bodyFontSize = parseFloat(
+    window.getComputedStyle(document.body).fontSize
+  );
+  element.style.fontSize =
+    window.prompt(
+      "Font size in REM",
+      parseFloat(window.getComputedStyle(element).fontSize) / bodyFontSize
+    ) *
+      bodyFontSize +
+    "px";
+}
+function retop(element) {
+  element.style.top =
+    window.prompt("Top", parseFloat(window.getComputedStyle(element).top)) +
+    "px";
+}
