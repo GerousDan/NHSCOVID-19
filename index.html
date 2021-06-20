@@ -8,10 +8,10 @@
       content="viewport-fit=cover, height=device-height, user-scalable=no"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
+    <!-- <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
-    />
+    /> -->
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
@@ -30,11 +30,12 @@
       </div>
     </div>
     <div id="bottom">
-      <div id="cancel">Wrong check-in? Tap to cancel.</div>
+      <div id="cancel" onclick="checkinTime();">
+        Wrong check-in? Tap to cancel.
+      </div>
       <div id="home">Back to home</div>
     </div>
   </body>
 </html>
 <!-- onclick="rebottom(this);" -->
-<!-- onclick="checkinTime();"-->
 <!-- onclick="resize(this);" -->

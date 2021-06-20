@@ -1,23 +1,24 @@
 html {
-  /* background-attachment: scroll;
+  background-attachment: scroll;
   background-image: url(6.PNG);
   background-repeat: no-repeat;
   background-size: 375px;
-  -moz-background-size: 100%;
+  /* -moz-background-size: 100%;
   -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-position: center top; */
-  font-family: "helvetica";
+  -o-background-size: 100%; */
+  background-position: center top;
+  font: -apple-system-body;
   overflow: hidden;
   height: calc(100% + env(safe-area-inset-top));
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
 }
-/* body {
-  height: 100%;
+body {
+  font-family: "helvetica";
+  font-size: 20px;
+  /* height: 100%;
   overflow: hidden;
-  margin: 0;
-} */
+  margin: 0; */
+}
 div {
   text-align: center;
   width: 84%;
@@ -63,8 +64,8 @@ div {
   line-height: 2.39;
   border-radius: 9px;
   color: #fff;
-  background-color: #005eb8;
-  /* background: Transparent no-repeat; */
+  /* background-color: #005eb8; */
+  background: Transparent no-repeat;
 }
 #tickImg {
   position: fixed;
