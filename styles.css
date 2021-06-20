@@ -1,20 +1,22 @@
 html {
+  height: calc(100% + env(safe-area-inset-top));
   background-attachment: scroll;
   background-image: url(6.PNG);
   background-repeat: no-repeat;
-  background-size: 375px;
-  /* -moz-background-size: 100%;
+  background-size: 100%;
+  /* 375px
+  -moz-background-size: 100%;
   -webkit-background-size: 100%;
   -o-background-size: 100%; */
-  background-position: center top;
+  background-position: center -env(safe-area-inset-top);
   font: -apple-system-body;
   overflow: hidden;
-  height: calc(100% + env(safe-area-inset-top));
+
   /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
 }
 body {
   font-family: "helvetica";
-  font-size: 20px;
+  /* font-size: 20px; */
   /* height: 100%;
   overflow: hidden;
   margin: 0; */
