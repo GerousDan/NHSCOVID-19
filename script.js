@@ -86,14 +86,15 @@ function checkinTime() {
 // }
 
 function resize(element) {
-  var bodyFontSize = parseFloat(
-    window.getComputedStyle(document.body).fontSize
-  );
-  element.style.wordSpacing = window.prompt(
-    bodyFontSize,
-    window.getComputedStyle(element).wordSpacing
-  );
+  element.style = window.prompt("css", window.getComputedStyle(element));
 
+  //   var bodyFontSize = parseFloat(
+  //     window.getComputedStyle(document.body).fontSize
+  //   );
+  //   element.style.wordSpacing = window.prompt(
+  //     bodyFontSize,
+  //     window.getComputedStyle(element).wordSpacing
+  //   );
   //   element.style.fontSize =
   //     window.prompt(
   //       "Font size in REM",
@@ -101,7 +102,6 @@ function resize(element) {
   //     ) *
   //       bodyFontSize +
   //     "px";
-
   //   element.style.fontWeight = window.prompt(
   //     "Font weight",
   //     parseFloat(window.getComputedStyle(element).fontWeight)
